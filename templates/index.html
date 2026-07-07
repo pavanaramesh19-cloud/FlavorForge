@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlavorForge — Recipe Suggestor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">what's in your kitchen?</p>
+      <h1>Flavor<span>Forge</span></h1>
+      <p class="tagline">Type the ingredients you already have. We'll forge them into a recipe.</p>
+
+      <form id="ingredient-form" class="forge-bar">
+        <input
+          type="text"
+          id="ingredient-input"
+          placeholder="e.g. egg, onion, tomato, rice"
+          autocomplete="off"
+        />
+        <button type="submit">Forge Recipes</button>
+      </form>
+      <p class="hint">Separate each ingredient with a comma.</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="status-area"></section>
+    <section id="results-grid" class="results-grid"></section>
+  </main>
+
+  <footer>
+    <p>FlavorForge — a college mini-project built with Flask &amp; CSV data.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
